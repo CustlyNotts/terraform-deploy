@@ -45,7 +45,7 @@ variable "vpc_database_subnets" {
 variable "vpc_tags" {
   description = "Tags to apply to vpc peering for api x data vpc"
   type        = map(string)
-  default     = { "Name" = "demo-vpc", "created-by" = "terraform" }
+  default     = { "Name" = "demo-vpc", "created-by" = "Kehinde_Aturuka" }
 }
 
 # ASG variables
@@ -65,7 +65,7 @@ variable "asg_sg_description" {
 variable "asg_sg_tags" {
   description = "Tags for autoscaling group security group"
   type        = map(string)
-  default     = { "Name" = "demo-asg-sg", "created-by" = "terraform" }
+  default     = { "Name" = "demo-asg-sg", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "asg_name" {
@@ -173,7 +173,7 @@ variable "asg_iam_role_description" {
 variable "asg_iam_role_tags" {
   description = "Auto scaling group iam role tags"
   type        = map(string)
-  default     = { "Name" = "demo-asg-iam-role", "created-by" = "terraform" }
+  default     = { "Name" = "demo-asg-iam-role", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "asg_block_device_mappings_volume_size_0" {
@@ -191,19 +191,19 @@ variable "asg_block_device_mappings_volume_size_1" {
 variable "asg_instance_tags" {
   description = "Auto scaling group instance tags"
   type        = map(string)
-  default     = { "Name" = "demo-asg-instance", "created-by" = "terraform" }
+  default     = { "Name" = "demo-asg-instance", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "asg_volume_tags" {
   description = "Auto scaling group volume tags"
   type        = map(string)
-  default     = { "Name" = "demo-asg-volume", "created-by" = "terraform" }
+  default     = { "Name" = "demo-asg-volume", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "asg_tags" {
   description = "Auto scaling group tags"
   type        = map(string)
-  default     = { "Name" = "demo-asg", "created-by" = "terraform" }
+  default     = { "Name" = "demo-asg", "created-by" = "Kehinde_Aturuka" }
 }
 
 # ALB variables
@@ -228,7 +228,7 @@ variable "alb_sg_description" {
 variable "alb_sg_tags" {
   description = "Application load balancer security group tags"
   type        = map(string)
-  default     = { "Name" = "demo-alb-sg", "created-by" = "terraform" }
+  default     = { "Name" = "demo-alb-sg", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "alb_description" {
@@ -264,7 +264,7 @@ variable "alb_target_groups_backend_port" {
 variable "alb_tags" {
   description = "Application load balancer tags"
   type        = map(string)
-  default     = { "Name" = "demo-alb", "created-by" = "terraform" }
+  default     = { "Name" = "demo-alb", "created-by" = "Kehinde_Aturuka" }
 }
 
 # RDS variables
@@ -283,7 +283,7 @@ variable "rds_sg_description" {
 variable "rds_sg_tags" {
   description = "Relational database service security group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds-sg", "created-by" = "terraform" }
+  default     = { "Name" = "demo-rds-sg", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "rds_identifier" {
@@ -427,29 +427,29 @@ variable "rds_monitoring_interval" {
 variable "rds_tags" {
   description = "Relational database service tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "rds_db_instance_tags" {
   description = "Relational database service db instance tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "rds_db_option_group_tags" {
   description = "Relational database service db option group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "rds_db_parameter_group_tags" {
   description = "Relational database service db parameter group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "rds_db_subnet_group_tags" {
   description = "Relational database service db subnet group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "terraform" }
+  default     = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
 }

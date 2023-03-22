@@ -8,12 +8,12 @@ vpc_azs              = ["us-east-1a", "us-east-1b", "us-east-1c"]
 vpc_public_subnets   = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
 vpc_private_subnets  = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
 vpc_database_subnets = ["10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
-vpc_tags             = { "created-by" = "terraform" }
+vpc_tags             = { "created-by" = "Kehinde_Aturuka" }
 
 # ASG variables
 asg_sg_name                             = "demo-asg-sg"
 asg_sg_description                      = "demo-asg-sg"
-asg_sg_tags                             = { "Name" = "demo-asg-sg", "created-by" = "terraform" }
+asg_sg_tags                             = { "Name" = "demo-asg-sg", "created-by" = "Kehinde_Aturuka" }
 asg_name                                = "demo-asg"
 asg_min_size                            = 0
 asg_max_size                            = 2
@@ -31,28 +31,28 @@ asg_create_iam_instance_profile         = true
 asg_iam_role_name                       = "demo-asg-iam-role"
 asg_iam_role_path                       = "/ec2/"
 asg_iam_role_description                = "demo-asg-iam-role"
-asg_iam_role_tags                       = { "Name" = "demo-asg-iam-role", "created-by" = "terraform" }
+asg_iam_role_tags                       = { "Name" = "demo-asg-iam-role", "created-by" = "Kehinde_Aturuka" }
 asg_block_device_mappings_volume_size_0 = 20
 asg_block_device_mappings_volume_size_1 = 30
-asg_instance_tags                       = { "Name" = "demo-asg-instance", "created-by" = "terraform" }
-asg_volume_tags                         = { "Name" = "demo-asg-volume", "created-by" = "terraform" }
-asg_tags                                = { "Name" = "demo-asg", "created-by" = "terraform" }
+asg_instance_tags                       = { "Name" = "demo-asg-instance", "created-by" = "Kehinde_Aturuka" }
+asg_volume_tags                         = { "Name" = "demo-asg-volume", "created-by" = "Kehinde_Aturuka" }
+asg_tags                                = { "Name" = "demo-asg", "created-by" = "Kehinde_Aturuka" }
 
 # ALB variables
 alb_sg_name                    = "demo-alb-sg"
 alb_sg_ingress_cidr_blocks     = ["0.0.0.0/0"]
 alb_sg_description             = "demo-alb-sg"
-alb_sg_tags                    = { "Name" = "demo-alb-sg", "created-by" = "terraform" }
+alb_sg_tags                    = { "Name" = "demo-alb-sg", "created-by" = "Kehinde_Aturuka" }
 alb_name                       = "demo-alb"
 alb_http_tcp_listeners_port    = 80
 alb_target_group_name          = "demo-alb-tg"
 alb_target_groups_backend_port = 80
-alb_tags                       = { "Name" = "demo-alb", "created-by" = "terraform" }
+alb_tags                       = { "Name" = "demo-alb", "created-by" = "Kehinde_Aturuka" }
 
 # RDS variables
 rds_sg_name                               = "demo-rds-sg"
 rds_sg_description                        = "demo-rds-sg"
-rds_sg_tags                               = { "Name" = "demo-rds-sg", "created-by" = "terraform" }
+rds_sg_tags                               = { "Name" = "demo-rds-sg", "created-by" = "Kehinde_Aturuka" }
 rds_identifier                            = "demo-rds"
 rds_mysql_engine                          = "mysql"
 rds_engine_version                        = "8.0.27"
@@ -76,8 +76,8 @@ rds_performance_insights_enabled          = false
 rds_performance_insights_retention_period = 7
 rds_create_monitoring_role                = true
 rds_monitoring_interval                   = 60
-rds_tags                                  = { "Name" = "demo-rds", "created-by" = "terraform" }
-rds_db_instance_tags                      = { "Name" = "demo-rds-instance", "created-by" = "terraform" }
-rds_db_option_group_tags                  = { "Name" = "demo-rds-option-group", "created-by" = "terraform" }
-rds_db_parameter_group_tags               = { "Name" = "demo-rds-db-parameter-group", "created-by" = "terraform" }
-rds_db_subnet_group_tags                  = { "Name" = "demo-rds-db-subnet-group", "created-by" = "terraform" }
+rds_tags                                  = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
+rds_db_instance_tags                      = { "Name" = "demo-rds-instance", "created-by" = "Kehinde_Aturuka" }
+rds_db_option_group_tags                  = { "Name" = "demo-rds-option-group", "created-by" = "Kehinde_Aturuka" }
+rds_db_parameter_group_tags               = { "Name" = "demo-rds-db-parameter-group", "created-by" = "Kehinde_Aturuka" }
+rds_db_subnet_group_tags                  = { "Name" = "demo-rds-db-subnet-group", "created-by" = "Kehinde_Aturuka" }
