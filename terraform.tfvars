@@ -1,10 +1,10 @@
 # Generic variables
-region = "us-east-1"
+region = "eu-west-2"
 
 # VPC variables
 vpc_name             = "demo-vpc"
 vpc_cidr             = "10.0.0.0/16"
-vpc_azs              = ["us-east-1a", "us-east-1b", "us-east-1c"]
+vpc_azs              = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
 vpc_public_subnets   = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
 vpc_private_subnets  = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
 vpc_database_subnets = ["10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
@@ -16,15 +16,15 @@ asg_sg_description                      = "demo-asg-sg"
 asg_sg_tags                             = { "Name" = "demo-asg-sg", "created-by" = "Kehinde_Aturuka" }
 asg_name                                = "demo-asg"
 asg_min_size                            = 0
-asg_max_size                            = 2
-asg_desired_capacity                    = 2
+asg_max_size                            = 4
+asg_desired_capacity                    = 4
 asg_wait_for_capacity_timeout           = 0
 asg_health_check_type                   = "EC2"
 asg_launch_template_name                = "demo-lt"
 asg_launch_template_description         = "demo-lt"
 asg_update_default_version              = true
 asg_image_id                            = "ami-026b57f3c383c2eec"
-asg_instance_type                       = "t3.micro"
+asg_instance_type                       = "t2.micro"
 asg_ebs_optimized                       = true
 asg_enable_monitoring                   = true
 asg_create_iam_instance_profile         = true
@@ -50,6 +50,7 @@ alb_target_groups_backend_port = 80
 alb_tags                       = { "Name" = "demo-alb", "created-by" = "Kehinde_Aturuka" }
 
 # RDS variables
+rds_instance_count                        = 2
 rds_sg_name                               = "demo-rds-sg"
 rds_sg_description                        = "demo-rds-sg"
 rds_sg_tags                               = { "Name" = "demo-rds-sg", "created-by" = "Kehinde_Aturuka" }
@@ -64,7 +65,7 @@ rds_max_allocated_storage                 = 100
 rds_db_name                               = "demo_mysql"
 rds_username                              = "demo_user"
 rds_port                                  = 3306
-rds_multi_az                              = false
+rds_multi_az                              = true
 rds_maintenance_window                    = "Mon:00:00-Mon:03:00"
 rds_backup_window                         = "03:00-06:00"
 rds_enabled_cloudwatch_logs_exports       = ["general"]

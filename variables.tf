@@ -268,6 +268,11 @@ variable "alb_tags" {
 }
 
 # RDS variables
+variable "rds_instance_count" {
+  description = "Number of relational database instances to provision"
+  type        = number
+  default     = 1
+}
 variable "rds_sg_name" {
   description = "Relational database service security group name"
   type        = string

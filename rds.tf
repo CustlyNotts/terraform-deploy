@@ -33,6 +33,7 @@ module "rds" {
   family               = var.rds_family               # DB parameter group
   major_engine_version = var.rds_major_engine_version # DB option group
   instance_class       = var.rds_instance_class
+  count                = var.rds_instance_count       # number of DBs to deploy
 
   allocated_storage     = var.rds_allocated_storage
   max_allocated_storage = var.rds_max_allocated_storage
