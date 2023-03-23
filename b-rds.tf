@@ -2,7 +2,7 @@
 # Supporting Resources
 ################################################################################
 
-module "security_group" {
+module "security_group_1" {
   source      = "terraform-aws-modules/security-group/aws"
   version     = "~> 4.0"
   name        = var.rds_sg_name
@@ -22,7 +22,7 @@ module "security_group" {
 # Relational database service (RDS)
 ################################################################################
 
-module "rds" {
+module "rds_1" {
   source  = "terraform-aws-modules/rds/aws"
   version = "5.1.0"
   # insert the 1 required variable here
