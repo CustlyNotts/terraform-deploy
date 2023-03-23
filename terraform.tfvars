@@ -50,7 +50,7 @@ alb_target_groups_backend_port = 80
 alb_tags                       = { "Name" = "demo-alb", "created-by" = "Kehinde_Aturuka" }
 
 # RDS variables
-rds_instance_count                        = 2
+rds_instance_count                        = 1
 rds_sg_name                               = "demo-rds-sg"
 rds_sg_description                        = "demo-rds-sg"
 rds_sg_tags                               = { "Name" = "demo-rds-sg", "created-by" = "Kehinde_Aturuka" }
