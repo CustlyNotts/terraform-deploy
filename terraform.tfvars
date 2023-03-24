@@ -77,8 +77,8 @@ rds_performance_insights_enabled          = false
 rds_performance_insights_retention_period = 7
 rds_create_monitoring_role                = true
 rds_monitoring_interval                   = 60
-rds_tags                                  = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
-rds_db_instance_tags                      = { "Name" = "demo-rds-instance", "created-by" = "Kehinde_Aturuka" }
+# rds_tags                                  = { "Name" = join("-", ["demo-rds", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
+# rds_db_instance_tags                      = { "Name" = join("-", ["demo-rds-instance", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
 rds_db_option_group_tags                  = { "Name" = "demo-rds-option-group", "created-by" = "Kehinde_Aturuka" }
 rds_db_parameter_group_tags               = { "Name" = "demo-rds-db-parameter-group", "created-by" = "Kehinde_Aturuka" }
 rds_db_subnet_group_tags                  = { "Name" = "demo-rds-db-subnet-group", "created-by" = "Kehinde_Aturuka" }

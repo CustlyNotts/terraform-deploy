@@ -26,7 +26,7 @@ rm phpMyAdmin-latest-all-languages.tar.gz
 echo '<?php phpinfo(); ?>' > /var/www/html/phpinfo.php
 cd phpMyAdmin
 mv config.sample.inc.php config.inc.php
-sed -i 's/localhost/${module.rds.db_instance_address}/g' config.inc.php
+for instance in [module.rds]; do sed -i 's/localhost/"$instance.db_instance_address"/g' config.inc.php; done
   EOT
 }
 

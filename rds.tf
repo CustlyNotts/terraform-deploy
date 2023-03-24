@@ -33,6 +33,7 @@ module "rds" {
   family               = var.rds_family               # DB parameter group
   major_engine_version = var.rds_major_engine_version # DB option group
   instance_class       = var.rds_instance_class
+  count                = var.rds_instance_count
 
   allocated_storage     = var.rds_allocated_storage
   max_allocated_storage = var.rds_max_allocated_storage
@@ -70,8 +71,8 @@ module "rds" {
     }
   ]
 
-  tags                    = var.rds_tags
-  db_instance_tags        = var.rds_db_instance_tags
+  tags                    = { "Name" = join("-", ["demo-rds", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
+  db_instance_tags        = { "Name" = join("-", ["demo-rds-instance", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
   db_option_group_tags    = var.rds_db_option_group_tags
   db_parameter_group_tags = var.rds_db_parameter_group_tags
   db_subnet_group_tags    = var.rds_db_subnet_group_tags
