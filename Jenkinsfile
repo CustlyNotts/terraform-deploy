@@ -14,11 +14,21 @@ pipeline {
         checkout scm
       }
     }
-    stage('terraform') {
+    stage('terraform init') {
       steps {
         sh "chmod +x -R ${env.WORKSPACE}"
         sh './terraformw init -backend-config="access_key=AKIATELYXRMPAUHGIYM5" -backend-config="secret_key=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" -backend-config="region=us-east-1" -no-color'
+      }
+    }
+    stage('terraform plan') {
+      steps {
+        sh "chmod +x -R ${env.WORKSPACE}"
         sh './terraformw plan -no-color'
+      }
+    }
+    stage('terraform apply') {
+      steps {
+        sh "chmod +x -R ${env.WORKSPACE}"
         sh './terraformw apply -auto-approve -no-color'
       }
     }
