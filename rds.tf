@@ -26,7 +26,7 @@ module "rds" {
   source  = "terraform-aws-modules/rds/aws"
   version = "5.1.0"
   # insert the 1 required variable here
-  identifier = var.rds_identifier
+  identifier = join("-", ["demo-rds", count.index + 1])
   # All available versions: http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt
   engine               = var.rds_mysql_engine
   engine_version       = var.rds_engine_version
@@ -71,10 +71,10 @@ module "rds" {
     }
   ]
 
-  tags                    = { "Name" = join("-", ["demo-rds", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
-  db_instance_tags        = { "Name" = join("-", ["demo-rds-instance", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
-  db_option_group_tags    = var.rds_db_option_group_tags
-  db_parameter_group_tags = var.rds_db_parameter_group_tags
-  db_subnet_group_tags    = var.rds_db_subnet_group_tags
+  tags                    = { Name = join("-", ["demo-rds", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
+  db_instance_tags        = { Name = join("-", ["demo-rds-instance", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
+  db_option_group_tags    = { Name = join("-", ["demo-rds-db-option-group", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
+  db_parameter_group_tags = { Name = join("-", ["demo-rds-db-parameter-group", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
+  db_subnet_group_tags    = { Name = join("-", ["demo-rds-db-subnet-group", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
 }
 

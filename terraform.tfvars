@@ -50,11 +50,11 @@ alb_target_groups_backend_port = 80
 alb_tags                       = { "Name" = "demo-alb", "created-by" = "Kehinde_Aturuka" }
 
 # RDS variables
-rds_instance_count                        = 1
+rds_instance_count                        = 2
 rds_sg_name                               = "demo-rds-sg"
 rds_sg_description                        = "demo-rds-sg"
 rds_sg_tags                               = { "Name" = "demo-rds-sg", "created-by" = "Kehinde_Aturuka" }
-rds_identifier                            = "demo-rds"
+# rds_identifier                            = "demo-rds"
 rds_mysql_engine                          = "mysql"
 rds_engine_version                        = "8.0.27"
 rds_family                                = "mysql8.0" # DB parameter group
@@ -69,16 +69,16 @@ rds_multi_az                              = true
 rds_maintenance_window                    = "Mon:00:00-Mon:03:00"
 rds_backup_window                         = "03:00-06:00"
 rds_enabled_cloudwatch_logs_exports       = ["general"]
-rds_create_cloudwatch_log_group           = true
+rds_create_cloudwatch_log_group           = false
 rds_backup_retention_period               = 0
 rds_skip_final_snapshot                   = true
 rds_deletion_protection                   = false
 rds_performance_insights_enabled          = false
 rds_performance_insights_retention_period = 7
-rds_create_monitoring_role                = true
-rds_monitoring_interval                   = 60
+rds_create_monitoring_role                = false
+rds_monitoring_interval                   = 0
 # rds_tags                                  = { "Name" = join("-", ["demo-rds", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
 # rds_db_instance_tags                      = { "Name" = join("-", ["demo-rds-instance", count.index + 1]), "created-by" = "Kehinde_Aturuka" }
-rds_db_option_group_tags                  = { "Name" = "demo-rds-option-group", "created-by" = "Kehinde_Aturuka" }
-rds_db_parameter_group_tags               = { "Name" = "demo-rds-db-parameter-group", "created-by" = "Kehinde_Aturuka" }
-rds_db_subnet_group_tags                  = { "Name" = "demo-rds-db-subnet-group", "created-by" = "Kehinde_Aturuka" }
+# rds_db_option_group_tags                  = { "Name" = "demo-rds-option-group", "created-by" = "Kehinde_Aturuka" }
+# rds_db_parameter_group_tags               = { "Name" = "demo-rds-db-parameter-group", "created-by" = "Kehinde_Aturuka" }
+# rds_db_subnet_group_tags                  = { "Name" = "demo-rds-db-subnet-group", "created-by" = "Kehinde_Aturuka" }

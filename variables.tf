@@ -432,25 +432,25 @@ variable "rds_monitoring_interval" {
 variable "rds_tags" {
   description = "Relational database service tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
+  default     = { "Name" = "demos-rds", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "rds_db_instance_tags" {
   description = "Relational database service db instance tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
+  default     = { "Name" = "demos-rds", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "rds_db_option_group_tags" {
   description = "Relational database service db option group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
+  default     = { "Name" = "demos-rds", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "rds_db_parameter_group_tags" {
   description = "Relational database service db parameter group tags"
   type        = map(string)
-  default     = { "Name" = "demo-rds", "created-by" = "Kehinde_Aturuka" }
+  default     = { "Name" = "demos-rds", "created-by" = "Kehinde_Aturuka" }
 }
 
 variable "rds_db_subnet_group_tags" {
