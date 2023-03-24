@@ -12,6 +12,10 @@ module "security_group" {
     {
       rule                     = "mysql-tcp"
       source_security_group_id = module.asg_sg.security_group_id
+    },
+    {
+      rule                     = "ssh-tcp"
+      source_security_group_id = module.asg_sg.security_group_id
     }
   ]
   number_of_computed_ingress_with_source_security_group_id = 1
