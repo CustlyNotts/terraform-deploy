@@ -1,25 +1,28 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Checkout') {
-            steps {
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/CustlyNotts/terraform-deploy.git']]])            
-
-          }
-        }
-        
-        stage ("terraform init") {
-            steps {
-                sh ('terraform init') 
-            }
-        }
-        
-        stage ("terraform Action") {
-            steps {
-                echo "Terraform action is --> ${action}"
-                sh ('terraform ${action} --auto-approve') 
-           }
-        }
+  agent { label 'linux'}
+  options {
+    skipDefaultCheckout(true)
+  }
+  stages{
+    stage('clean workspace') {
+      steps {
+        cleanWs()
+      }
     }
+    stage('checkout') {
+      steps {
+        checkout scm
+      }
+    }
+    stage('terraform') {
+      steps {
+        sh './terraformw apply -auto-approve -no-color'
+      }
+    }
+  }
+  post {
+    always {
+      cleanWs()
+    }
+  }
 }
